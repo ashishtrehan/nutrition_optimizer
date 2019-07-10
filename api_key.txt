@@ -1,0 +1,4 @@
+key=41NCU2UAh2iG9DBcoTExJy1cj6dpgt7jv2GRqPFG
+account_id=8d056771-5926-4d80-a30d-e7cf41e37a05
+example=https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=41NCU2UAh2iG9DBcoTExJy1cj6dpgt7jv2GRqPFG&location=Denver+CO
+
