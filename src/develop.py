@@ -4,9 +4,12 @@ import parameters
 import os
 from urllib.parse import urlencode, quote_plus
 from util import unpack
+from usda import UsdaClient
 
 
 api_key = os.environ['API_KEY']
+
+
 
 class Search(object):
     def __init__(self,data):
@@ -28,7 +31,12 @@ class List(object):
 
 class Item(object):
     def __init__(self,data):
-        self.offset = 0
+        self.group = data.get('group')
+        self.ds = data.get('ds')
+        self.ds = data.get('ndbno')
+        self.name = data.get('name')
+        self.manu = data.get('manu')
+        self.offset = data.get('offset')
 
 
 
@@ -47,5 +55,10 @@ class USDA():
         return List(Search(data).usda).item
 
 
-a = (USDA().first_search())
+
+
+
+a = USDA().first_search()
 print (a)
+
+
